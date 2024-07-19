@@ -1,0 +1,75 @@
+:root {
+  --font-color: #ffffffbf;
+  --gray-main: #eaedf0;
+  --blue-main: rgb(32, 139, 188);
+
+  font-family: 'Noto Sans Myanmar', sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+
+  color-scheme: light dark;
+  color: var(--gray-main);
+  background-color: #212133;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  background-image: url("../public/imgs/bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 0 0 40px 0;
+  text-align: start;
+}
+
+h4 {
+  margin-top: 40px;
+}
+
+h3>span {
+  color: var(--blue-main);
+}
+
+#app {
+  max-width: 1264px;
+  width: 1200px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  max-height: 80px;
+}
+
+@media(max-width: 576px) {
+  h3 {
+    font-size: 24px;
+    margin: 0 0 40px 0;
+    text-align: start;
+    width: 200px;
+  }
+}

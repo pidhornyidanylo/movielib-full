@@ -1,0 +1,160 @@
+#search-form {
+    display: flex;
+    gap: 20px;
+    width: 350px;
+    position: relative;
+
+    .search-input {
+        flex: 1;
+        padding: 10px 15px;
+        font-size: 21px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(253, 253, 253, 0.6);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+
+        &:hover {
+            background-color: var(--font-color);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .searched-span {
+        position: absolute;
+        top: -15px;
+        left: 5px;
+        color: #000000;
+        background-color: var(--blue-main);
+        padding: 3px 8px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        font-weight: 500;
+}
+
+    button {
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--font-color);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 768px) {
+    #search-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 80%;
+    
+        .search-input {
+            flex: 1;
+            padding: 10px 15px;
+            font-size: 21px;
+            border-radius: 10px;
+            border: none;
+            color: #000000;
+            background-color: rgba(253, 253, 253, 0.6);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+    
+            &:hover {
+                background-color: var(--font-color);
+            }
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        button {
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            color: #000000;
+            background-color: var(--font-color);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width: 375px) {
+    #search-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 80%;
+    
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            color: #000000;
+            background-color: rgba(253, 253, 253, 0.6);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+    
+            &:hover {
+                background-color: var(--font-color);
+            }
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        button {
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            color: #000000;
+            background-color: var(--font-color);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}

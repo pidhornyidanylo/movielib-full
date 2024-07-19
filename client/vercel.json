@@ -1,0 +1,32 @@
+{
+    "routes": [
+      {
+        "src": "/", 
+        "dest": "/"
+      },
+      {
+        "src": "/about", 
+        "dest": "/"
+      },
+      {
+        "src": "/settings", 
+        "dest": "/"
+      },
+      {
+        "src": "/login", 
+        "dest": "/"
+      },
+      {
+        "src": "/register", 
+        "dest": "/"
+      },
+      {
+        "src": "/favourites", 
+        "dest": "/"
+      },
+      {
+        "src": "/movie/(.*)", 
+        "dest": "/"
+      }
+    ]
+  }

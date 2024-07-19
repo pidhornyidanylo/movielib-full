@@ -1,0 +1,62 @@
+#favourite-movies-container {
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 36px;
+    grid-row-gap: 40px;
+    justify-items: center;
+}
+
+
+@media(max-width: 1300px) {
+    #favourite-movies-container {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-row-gap: 25px;
+        justify-items: center;
+    }
+}
+
+@media(max-width: 992px) {
+    #favourite-movies-container {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        justify-items: center;
+    }
+}
+
+@media(max-width: 768px) {
+    #favourite-movies-container {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        justify-items: center;
+    }
+}
+
+@media(max-width: 550px) {
+    #favourite-movies-container {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        justify-items: center;
+    }
+}

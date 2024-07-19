@@ -1,0 +1,55 @@
+.settings {
+    &-info {
+        margin-top: 25px;
+        font-size: 16px;
+        line-height: 160%;
+        text-align: justify;
+        color: var(--font-color);
+
+        &>span {
+            color: var(--blue-main);
+        }
+    }
+    &-list {
+        color: var(--font-color);
+        list-style-type: square;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 0 22px;
+    }
+}
+
+.contact-phone {
+    margin: 20px 0;
+    color: var(--font-color);
+    text-align: start;
+    &>span{
+        cursor: pointer;
+        color: var(--blue-main);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.features-subtitle {
+    text-align: start;
+    color: var(--font-color);
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.postscript {
+    text-align: left;
+    margin-top: 80px;
+    color: var(--font-color);
+}
+
+@media(max-width: 576px) {
+    .settings-title {
+        max-width: 280px;
+    }
+}

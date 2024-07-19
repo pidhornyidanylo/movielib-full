@@ -1,0 +1,352 @@
+.movie-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    width: 260px;
+    height: 480px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #4b769c;
+    z-index: 1;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+
+.image-container {
+    height: 400px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.image-container img {
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+}
+
+.image-container img.loaded {
+    opacity: 1;
+}
+
+.movie-title>a {
+    text-align: start;
+    font-size: 21px;
+    font-weight: 600;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.movie-title>a:hover {
+    color: #000000;
+}
+
+.addBtn {
+    background-color: inherit;
+    position: relative;
+    padding: 8px 12px;
+    border: 1px solid #212133;
+    background-color: #212133;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: var(--gray-main);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.addBtn:hover {
+    background-color: var(--blue-main);
+    border: 1px solid var(--blue-main);
+}
+
+.deleteBtn {
+    background-color: inherit;
+    position: relative;
+    padding: 8px 12px;
+    border: 1px solid #212133;
+    background-color: #212133;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: var(--gray-main);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.deleteBtn:hover {
+    background-color: var(--blue-main);
+    border: 1px solid var(--blue-main);
+}
+
+
+.info-toast {
+    position: fixed;
+    width: 250px;
+    font-weight: 300;
+    color: black;
+    border-radius: 5px;
+    padding: 12px 15px;
+    bottom: 50px;
+    left: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    animation: bounceIn 0.5s ease;
+    z-index: 10;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+    }
+
+    60% {
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@media(max-width: 1300px) {
+    .movie-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        height: 620px;
+        padding: 10px 5px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background-color: #4b769c;
+        z-index: 1;
+    }
+
+    .image-container {
+        height: 520px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .image-container img {
+        object-position: bottom;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .addBtn {
+        background-color: inherit;
+        position: relative;
+        padding: 8px 12px;
+        border: 1px solid #212133;
+        background-color: #212133;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: var(--gray-main);
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+    }
+
+    .deleteBtn {
+        background-color: inherit;
+        position: relative;
+        padding: 8px 12px;
+        border: 1px solid #212133;
+        background-color: #212133;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: var(--gray-main);
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+    }
+
+}
+
+@media(max-width: 768px) {
+    .movie-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 17px;
+        width: 100%;
+        height: 500px;
+        padding: 10px 5px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background-color: #4b769c;
+        z-index: 1;
+    }
+
+    .image-container {
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .image-container img {
+        object-position: bottom;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .info-toast {
+        position: fixed;
+        max-width: 220px;
+        font-weight: 300;
+        color: black;
+        border-radius: 5px;
+        padding: 8px 12px;
+        bottom: 50px;
+        left: 20px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        animation: bounceIn 0.5s ease;
+        z-index: 10;
+        -webkit-animation: bounceIn 0.5s ease;
+}
+}
+
+@media(max-width: 425px) {
+    .movie-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: 500px;
+        padding: 10px 5px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background-color: #4b769c;
+        z-index: 1;
+    }
+
+
+    .image-container {
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .image-container img {
+        object-position: bottom;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media(max-width: 375px) {
+    .movie-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: 466px;
+        padding: 10px 5px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background-color: #4b769c;
+        z-index: 1;
+    }
+
+    .image-container {
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .image-container img {
+        object-position: bottom;
+        object-fit: cover;
+        width: 100%;
+    }
+}

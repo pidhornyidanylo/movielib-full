@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./server/.env
+    depends_on:
+      - mongodb
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./client/.env
+    depends_on:
+      - server
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=supersecret

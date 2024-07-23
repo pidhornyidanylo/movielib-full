@@ -1,6 +1,5 @@
 import type { Movie } from "../types.dto";
-
-const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
+import { AUTH_TOKEN } from "./fetchSearcedMovieByTitle";
 
 export const fetchMovieById = async <S extends string>(
   id: S

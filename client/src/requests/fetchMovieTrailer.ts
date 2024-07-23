@@ -8,6 +8,5 @@ export const fetchMovieTrailers = async (movieTitle: string) => {
     )}&key=${API_KEY}`
   );
   const data = await response.json();
-  console.log(data.items[0])
   return data.items[0];
 };

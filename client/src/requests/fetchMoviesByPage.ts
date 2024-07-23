@@ -1,6 +1,6 @@
 import type { Movie } from "../types.dto";
+import { AUTH_TOKEN } from "./fetchSearcedMovieByTitle";
 
-const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
 const URI = "https://api.themoviedb.org/3/trending/movie/day";
 
 export const fetchMovies = async <T extends number>(

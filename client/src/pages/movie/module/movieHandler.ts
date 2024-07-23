@@ -1,5 +1,12 @@
 import { fetchMovieById } from "../../../requests/fetchMovieByID";
 import { fetchMovieTrailers } from "../../../requests/fetchMovieTrailer";
+import { fetchPopularMovies } from "../../../requests/fetchPopularMovies";
+import { Movie } from "../../../types.dto";
+import {
+  generateMovieHtml,
+  appendMoviesToContainer,
+} from "../../../uiFragments/movieFragment/movieFragment";
+
 import "../movie.scss";
 
 const USDollar = new Intl.NumberFormat("en-US", {
@@ -58,16 +65,27 @@ export const handleMovie = async <T extends HTMLElement>(
                     </ul>
               </div>
             </div>
+            <h4>Watch trailer:</h4>
             <div id="trailers"></div>
+            <h4>Watch also:</h4>
+            <div id="popular-movies">
+            </div>
         `;
   }
+  const movies = await fetchPopularMovies();
+  const popularMoviesContainer = document.getElementById("popular-movies");
+  const popularMoviesHTML = generateMovieHtml(movies as Movie[], "home");
+  appendMoviesToContainer(
+    popularMoviesHTML,
+    popularMoviesContainer as HTMLElement
+  );
   const trailer = async function displayTrailers(movieTitle: string) {
     const trailer = await fetchMovieTrailers(movieTitle);
     const trailerContainer = document.getElementById("trailers");
     if (trailerContainer) {
       trailerContainer.innerHTML = "";
       const iframe = document.createElement("iframe");
-      iframe.className = "movie-trailer"
+      iframe.className = "movie-trailer";
       iframe.src = `https://www.youtube.com/embed/${trailer.id.videoId}`;
       iframe.allow =
         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";

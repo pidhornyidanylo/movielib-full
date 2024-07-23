@@ -118,13 +118,30 @@
 .movie-trailer {
     width: 100%;
     height: 800px;
-    margin-top: 70px;
+    margin-top: 50px;
     border: none;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+#popular-movies {
+    padding-top: 20px;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 36px;
+    grid-row-gap: 40px;
+    justify-items: center;
+
+}
+h4 {
+    text-align: left;
+    font-size: 22px;
 }
 
 @media(max-width: 1300px) {
@@ -204,9 +221,13 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
     }
+
+    #popular-movies {
+        grid-row-gap: 25px;
+    }
 }
 
-@media(max-width: 996px) {
+@media(max-width: 992px) {
     .movie-trailer {
         width: 100%;
         height: 400px;
@@ -216,6 +237,10 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+    }
+
+    #popular-movies {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -230,9 +255,20 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
     }
+
+    #popular-movies {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        justify-items: center;
+    }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 550px) {
     .movie-trailer {
         width: 100%;
         height: 200px;
@@ -242,5 +278,29 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+    }
+
+    #popular-movies {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        justify-items: center;
+    }
+}
+
+@media(max-width: 465px) {
+    #popular-movies {
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        justify-items: center;
     }
 }

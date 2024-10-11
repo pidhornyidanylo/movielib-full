@@ -1,6 +1,10 @@
 import { movie } from "../../pages";
 import { publicRoutes, secureRoutes } from "../../routes";
 
+window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+});
+
 export const handleMain = <T extends HTMLElement, A extends boolean>(
   main: T,
   auth: A

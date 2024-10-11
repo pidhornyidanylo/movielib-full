@@ -52,7 +52,7 @@ export const handleNavBar = <T extends HTMLElement, B extends boolean>(
       const href = (event.target as HTMLAnchorElement).getAttribute("href");
       if (href) {
         history.pushState({}, "", href);
-        window.location.href = href;
+        // window.location.href = href;
         await updateMain();
       }
     });

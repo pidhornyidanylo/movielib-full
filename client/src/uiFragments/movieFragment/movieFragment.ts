@@ -31,7 +31,7 @@ export const generateMovieHtml = <
           	<div class="image-container">
             <img loading="lazy" onload="this.classList.add('loaded')" height="400px" width="250px" src="https://image.tmdb.org/t/p/original${
               movie.poster_path
-            }" alt="${movie.title}" />
+            }" alt="${movie.title}" /> 
           	</div>
         	<div class="movie-title"><a href="/movie/${
             movie.id

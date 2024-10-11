@@ -6,6 +6,7 @@ import {
   generateMovieHtml,
   appendMoviesToContainer,
 } from "../../../uiFragments/movieFragment/movieFragment";
+
 import "../movie.scss";
 
 const USDollar = new Intl.NumberFormat("en-US", {
